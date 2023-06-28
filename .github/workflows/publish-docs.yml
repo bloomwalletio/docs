@@ -16,7 +16,7 @@ jobs:
 
       - uses: retypeapp/action-build@v3
         with:
-          config: docs
+          config: ./
 
       - uses: retypeapp/action-github-pages@v3
         with:
