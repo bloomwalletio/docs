@@ -1,3 +1,3 @@
-# template
+# Bloom Docs
 
-A template repository for any Bloom project.
+> Developer documentation for Bloom

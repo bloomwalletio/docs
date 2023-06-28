@@ -1,0 +1,16 @@
+{
+    "name": "@bloom-labs/docs",
+    "version": "0.1.0",
+    "description": "Developer documentation for Bloom",
+    "main": "index.js",
+    "repository": "git@github.com:bloomwalletio/bloom-docs.git",
+    "author": "Matthew Maxwell <maxwellmattryan@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "start": "retype watch"
+    },
+    "devDependencies": {
+        "retypeapp": "^3.0.3"
+    }
+}
