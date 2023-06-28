@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bloomwalletio.github.io/bloom-docs/sitemap.xml.gz
