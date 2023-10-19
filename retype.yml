@@ -1,12 +1,13 @@
 input: ./
 output: .retype
 url: bloomwalletio.github.io/bloom-docs/
-favicon: static/icon_firefly.png
+favicon: static/icon_bloom.png
 
 branding:
     title: Bloom
     label: v0.1.0
-    logo: 'static/icon_firefly.svg'
+    logo: 'static/logo_bloom-light.svg'
+    logoDark: 'static/logo_bloom-dark.svg'
 
 meta:
     title: ' | Bloom Developer Docs'

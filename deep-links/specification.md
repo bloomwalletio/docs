@@ -10,32 +10,32 @@ applications rather than a website.
 In our case we are interested in the user experiences that they enable
 between websites, applications, platforms, etc. by providing more interoperability.
 
-Firefly has its own deep link scheme, exposing (limited) functionality that is required in
+Bloom has its own deep link scheme, exposing (limited) functionality that is required in
 some type of user flow. A trivial example would be a user who buys native tokens on Soonaverse and
 must make a payment transaction to execute the buy order. Clicking on a deep link embedded inside the
-Soonaverse platform triggers Firefly to open and auto-fill the transaction data as necessary, making it
+Soonaverse platform triggers Bloom to open and auto-fill the transaction data as necessary, making it
 a simple confirm and click job for the user.
 
 :::caution
-Firefly **will NEVER** automatically execute actions initiated by a deep link; they should **ALWAYS** require manual
+Bloom **will NEVER** automatically execute actions initiated by a deep link; they should **ALWAYS** require manual
 confirmation on behalf of the user.
 :::
 
 ## Scheme
 
-The Firefly deep link scheme can be broken down to the following (simple) syntax:
+The Bloom deep link scheme can be broken down to the following (simple) syntax:
 
 ```
-firefly[-<stage>]://<context>/<operation>[?param=<param>]
+bloom[-<stage>]://<context>/<operation>[?param=<param>]
 ```
 
 The parameters are as follows:
 
 - `stage` - indicates a specific stage of the app to target, options are:
-    - `alpha` - the first available version of Firefly containing brand new features
-    - `beta` - the next available version of Firefly containing new but slightly tested features
-    - `shimmer` - the Firefly Shimmer version, containing new and well-tested features
-- `context` - the part of Firefly that contains the operation, options are:
+    - `alpha` - the first available version of Bloom containing brand new features
+    - `beta` - the next available version of Bloom containing new but slightly tested features
+    - `laters` - the Bloom Shimmer version, containing new and well-tested features
+- `context` - the part of Bloom that contains the operation, options are:
     - `wallet` - managing coins and tokens
     - `collectibles` - managing NFTs
     - `governance` - managing voting events and proposals
@@ -45,12 +45,9 @@ The parameters are as follows:
 If you wish to target the production version, simply omit this from the prefix:
 
 ```
-firefly://
+bloom://
 ```
 
-:::caution
-This deep link scheme is **NOT** compatible with Firefly V1, as that version of the application is in maintenance mode.
-:::
 
 ## Contexts
 
@@ -67,7 +64,7 @@ This operation brings the user to the send form popup:
 The deep link structure is as follows:
 
 ```
-firefly://wallet/sendForm?address=<address>&amount=<amount>[&unit=<unit>][&assetId=<assetId>][&metadata=<metadata>][&tag=<tag>]
+bloom://wallet/sendForm?address=<address>&amount=<amount>[&unit=<unit>][&assetId=<assetId>][&metadata=<metadata>][&tag=<tag>]
 ```
 
 The following parameters are **required**:
@@ -86,12 +83,12 @@ The following parameters are **optional**:
 
 Example:
 
-[!button Click me!](firefly://wallet/sendForm?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi)
+[!button Click me!](bloom://wallet/sendForm?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi)
 
 Source:
 
 ```
-firefly://wallet/sendForm?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi
+bloom://wallet/sendForm?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi
 ```
 
 #### Send Confirmation
@@ -105,7 +102,7 @@ This operation brings the user to the send confirmation popup:
 The deep link structure is as follows:
 
 ```
-firefly://wallet/sendConfirmation?address=<address>&amount=<amount>[&unit=<unit>][&assetId=<assetId>][&metadata=<metadata>][&tag=<tag>][&giftStorageDeposit=<true|false>][&disableToggleGift=<true|false>][&disableChangeExpiration=<true|false>][&surplus=<surplus>]
+bloom://wallet/sendConfirmation?address=<address>&amount=<amount>[&unit=<unit>][&assetId=<assetId>][&metadata=<metadata>][&tag=<tag>][&giftStorageDeposit=<true|false>][&disableToggleGift=<true|false>][&disableChangeExpiration=<true|false>][&surplus=<surplus>]
 ```
 
 The following parameters are **required**:
@@ -128,12 +125,12 @@ The following parameters are **optional**:
 
 Example:
 
-[!button Click me!](firefly://wallet/sendForm?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi&giftStorageDeposit=true&surplus=1&metadata=Take%20my%20money)
+[!button Click me!](bloom://wallet/sendForm?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi&giftStorageDeposit=true&surplus=1&metadata=Take%20my%20money)
 
 Source:
 
 ```
-firefly://wallet/sendConfirmation?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi&giftStorageDeposit=true&disableToggleGift=true&surplus=1&metadata=Take%20my%20money
+bloom://wallet/sendConfirmation?address=iota1qrhacyfwlcnzkvzteumekfkrrwks98mpdm37cj4xx3drvmjvnep6xqgyzyx&amount=10&unit=Gi&giftStorageDeposit=true&disableToggleGift=true&surplus=1&metadata=Take%20my%20money
 ```
 
 ### Collectibles
@@ -153,7 +150,7 @@ This operation brings the user to the add proposal popup:
 The deep link structure is as follows:
 
 ```
-firefly://governance/addProposal?eventId=<eventId>&nodeUrl=<nodeUrl>
+bloom://governance/addProposal?eventId=<eventId>&nodeUrl=<nodeUrl>
 ```
 
 The following parameters are **required**:
@@ -171,12 +168,12 @@ to manually enter the information.
 
 Example:
 
-[!button Click me!](firefly://governance/addProposal?eventId=0x6d27606a773a3c87c151af09ad58ddc831864e2141ef598075dc24be5668ca7f7f&nodeUrl=https://api.testnet.shimmer.network)
+[!button Click me!](bloom://governance/addProposal?eventId=0x6d27606a773a3c87c151af09ad58ddc831864e2141ef598075dc24be5668ca7f7f&nodeUrl=https://api.testnet.shimmer.network)
 
 Source:
 
 ```
-firefly://governance/addProposal?eventId=0x6d27606a773a3c87c151af09ad58ddc831864e2141ef598075dc24be5668ca7f7f&nodeUrl=https://api.testnet.shimmer.network
+bloom://governance/addProposal?eventId=0x6d27606a773a3c87c151af09ad58ddc831864e2141ef598075dc24be5668ca7f7f&nodeUrl=https://api.testnet.shimmer.network
 ```
 
 <style>
