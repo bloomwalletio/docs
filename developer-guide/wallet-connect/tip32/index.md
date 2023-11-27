@@ -1,6 +1,6 @@
 ---
 icon: link
-expanded: true
+expanded: false
 order: 999
 ---
 

@@ -1,7 +1,7 @@
 ---
-icon: link
+icon: book
 expanded: true
 order: 999
 ---
 
-# EIP155 RPC
+# User Guides
