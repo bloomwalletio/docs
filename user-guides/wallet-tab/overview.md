@@ -18,7 +18,7 @@ After you log into your Bloom profile, you will see the Bloom Dashboard. The wal
 9. [Portfolio Tab](#9-the-portfolio-tab)
 
 :::image
-![The wallet tab overview](../../static/user-guide/wallet-tab/overview.png)
+![The wallet tab overview.](../../static/user-guide/wallet-tab/overview.png)
 :::
 
 ### 1. Account Switcher
@@ -71,7 +71,15 @@ The Layer 2 summary contains the name of the network, your address, the total am
 
 The activity tab displays your recent account activities. The tab shows you the asset associated with the activity, the action, date, addresses and amount involved. It is possible to search and filter through your activities using the icons on the right side. Clicking on an activity opens the summary that provides you with additional information.
 
+:::image
+![The Activity Tab.](../../static/user-guide/wallet-tab/activity-tab.png)
+:::
+
 ### 9. The Portfolio Tab
 
 You can reach the portfolio tab by clicking the Tab switcher above the activity tab.
-The portfolio tab contains the tokens (base coin and native tokens) you own. It provides information on which network it lives, the market capitalization and the market price from CoinGecko.
+The portfolio tab contains the tokens (base token and native tokens) you own. It provides information on which network it lives, the market capitalization and the market price from CoinGecko.
+
+:::image
+![The Portfolio Tab.](../../static/user-guide/wallet-tab/portfolio-tab.png)
+:::
