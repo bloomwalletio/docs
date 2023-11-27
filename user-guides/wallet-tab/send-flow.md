@@ -8,7 +8,7 @@ order: 999
 There are multiple ways to enter the send flow. You can enter it through clicking the send button on the main dashboard, by clicking send on a given token or through a deep link. When you click the send button, it opens the token selection pop-up.
 
 :::image
-![The Send Button on the wallet tab.](../../static/user-guide/wallet-tab/send-flow-1.png)
+![The Send Button on the wallet tab.](../../static/screens/wallet-tab/send-flow-1.png)
 :::
 
 ### Token Selection
@@ -16,7 +16,7 @@ There are multiple ways to enter the send flow. You can enter it through clickin
 The token section serves to select the token you want to send. A search bar at the top of the pop-up helps you pick the token if you have many tokens. The tabs below allow you to view only the tokens on the given network. The token list consists of the base tokens and native tokens you own. The token avatar hints you from which network you can send them. The origin network will always equal to that of the token you want to send (e.g. Layer 2 Native Token will initiate a transaction from Layer 2).
 
 :::image
-![Token Selection](../../static/user-guide/wallet-tab/send-flow-2.png)
+![Token Selection](../../static/screens/wallet-tab/send-flow-2.png)
 :::
 
 **In case you want to send NFTs, you should go to the Collectibles tab**.
@@ -26,7 +26,7 @@ The token section serves to select the token you want to send. A search bar at t
 Based on the token you select, different networks pop up. For the base token and native token both Layer 1 and Layer 2 network shows up, since Bloom supports transferring from one layer to another. You can select a contact or one of your own accounts, or you can paste another address in the input field.
 
 :::image
-![Destination Selection](../../static/user-guide/wallet-tab/send-flow-3.png)
+![Destination Selection](../../static/screens/wallet-tab/send-flow-3.png)
 :::
 
 ### Amount Selection
@@ -36,7 +36,7 @@ This section provides the means to set the amount you want to send. It also show
 **Disclaimer: You won't be able to send your maximum Layer 1 SMR (or IOTA) balance minus ~50 000 base unit. You must have sufficient base token units left to cover the Storage Deposit Return Unlock conditions of the remainder output. This is a slight limitation of the UTXO output model and the storage deposit requirements.**
 
 :::image
-![Amount Selection](../../static/user-guide/wallet-tab/send-flow-4.png)
+![Amount Selection](../../static/screens/wallet-tab/send-flow-4.png)
 :::
 
 ### Storage Deposit
@@ -64,13 +64,13 @@ After selecting the previous options, the transaction summary allows you to unde
 **Ensure to select the additional options before you send the transaction. Once you click confirm, you can't change the transaction anymore.**
 
 :::image
-![Transaction Summary for Layer 1 transaction](../../static/user-guide/wallet-tab/send-flow-6.png)
+![Transaction Summary for Layer 1 transaction](../../static/screens/wallet-tab/send-flow-6.png)
 :::
 
 Bloom adds the estimated and the max gas fee for Layer 2 transactions. The estimated fee is just an estimation of the actual cost. The max fee is the upper limit the transaction is able to spend. Your balance needs to exceed the max gas fee balance in order for you to send the transaction.
 
 :::image
-![Transaction Summary for Layer 2 transaction](../../static/user-guide/wallet-tab/send-flow-7.png)
+![Transaction Summary for Layer 2 transaction](../../static/screens/wallet-tab/send-flow-7.png)
 :::
 
 ### Stronghold Unlocking

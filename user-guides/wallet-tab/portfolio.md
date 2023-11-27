@@ -8,7 +8,7 @@ order: 996
 Your portfolio contains your base tokens and native tokens on the different networks. You can search through them using the search bar on the top right. Additionally, you have a menu at the top right with additional actions, which are described below.
 
 :::image
-![The Portfolio Tab](../../static/user-guide/wallet-tab/portfolio-1.png)
+![The Portfolio Tab](../../static/screens/wallet-tab/portfolio-1.png)
 :::
 
 ### Force Sync Token
@@ -16,7 +16,7 @@ Your portfolio contains your base tokens and native tokens on the different netw
 Bloom automatically fetches your Layer 2 balances every 10 seconds. Click on the `Force sync tokens` option to manually trigger the token syncing.
 
 :::image
-![](../../static/user-guide/wallet-tab/portfolio-2.png)
+![](../../static/screens/wallet-tab/portfolio-2.png)
 :::
 
 ### Import ERC-20 Token
@@ -26,7 +26,7 @@ Bloom tracks the user's ERC-20 tokens through the Layer 2 explorer API. However,
 **Only ERC-20 Tokens on the supported EVM networks are supported!**
 
 :::image
-![](../../static/user-guide/wallet-tab/portfolio-3.png)
+![](../../static/screens/wallet-tab/portfolio-3.png)
 :::
 
 ### Refresh Token Metadata
@@ -34,5 +34,5 @@ Bloom tracks the user's ERC-20 tokens through the Layer 2 explorer API. However,
 Bloom caches tokens and their metadata for performance reasons. If you want to delete the cached tokens and their metadata, and refetch them, click on the `Refresh token metadata` option. Once cleared, Bloom fetches the information from the corresponding network and caches them again.
 
 :::image
-![](../../static/user-guide/wallet-tab/portfolio-4.png)
+![](../../static/screens/wallet-tab/portfolio-4.png)
 :::

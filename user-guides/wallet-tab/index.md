@@ -1,6 +1,6 @@
 ---
 icon: credit-card
-expanded: true
+expanded: false
 order: 999
 ---
 

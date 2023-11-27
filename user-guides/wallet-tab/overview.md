@@ -18,7 +18,7 @@ After you log into your Bloom profile, you will see the Bloom Dashboard. The wal
 9. [Portfolio Tab](#9-the-portfolio-tab)
 
 :::image
-![The wallet tab overview.](../../static/user-guide/wallet-tab/overview.png)
+![The wallet tab overview.](../../static/screens/wallet-tab/overview.png)
 :::
 
 ### 1. Account Switcher
@@ -26,7 +26,7 @@ After you log into your Bloom profile, you will see the Bloom Dashboard. The wal
 The Account Switcher indicates which account you currently view. Clicking on the switcher opens a dropdown that shows your available accounts with the corresponding balances. It also provides the option to create a new account.
 
 :::image
-![The Account switcher with a button to create a new account.](../../static/user-guide/wallet-tab/account-switcher.png)
+![The Account switcher with a button to create a new account.](../../static/screens/wallet-tab/account-switcher.png)
 :::
 
 ### 2. Account Menu
@@ -40,7 +40,7 @@ The Account menu allows you to provide actions related to your currently selecte
 - Delete account: removes your account from your profile. You can restore it using the wallet finder. *This option is not available for the first account.*
 
 :::image
-![The options available when you click on account menu.](../../static/user-guide/wallet-tab/account-menu.png)
+![The options available when you click on account menu.](../../static/screens/wallet-tab/account-menu.png)
 :::
 
 ### 3. Balance Summary
@@ -56,7 +56,7 @@ The send button opens the send flow. You can find more information about the dif
 The receive button opens a pop-up that displays your different addresses for the networks Bloom supports.
 
 :::image
-![The receive address pop-up.](../../static/user-guide/wallet-tab/receive-popup.png)
+![The receive address pop-up.](../../static/screens/wallet-tab/receive-popup.png)
 :::
 
 ### 6. Layer 1 Summary
@@ -72,7 +72,7 @@ The Layer 2 summary contains the name of the network, your address, the total am
 The activity tab displays your recent account activities. The tab shows you the asset associated with the activity, the action, date, addresses and amount involved. It is possible to search and filter through your activities using the icons on the right side. Clicking on an activity opens the summary that provides you with additional information.
 
 :::image
-![The Activity Tab.](../../static/user-guide/wallet-tab/activity-tab.png)
+![The Activity Tab.](../../static/screens/wallet-tab/activity-tab.png)
 :::
 
 ### 9. The Portfolio Tab
@@ -81,5 +81,5 @@ You can reach the portfolio tab by clicking the Tab switcher above the activity 
 The portfolio tab contains the tokens (base token and native tokens) you own. It provides information on which network it lives, the market capitalization and the market price from CoinGecko.
 
 :::image
-![The Portfolio Tab.](../../static/user-guide/wallet-tab/portfolio-tab.png)
+![The Portfolio Tab.](../../static/screens/wallet-tab/portfolio-tab.png)
 :::

@@ -1,7 +1,7 @@
 ---
 icon: tools
 expanded: false
-order: 999
+order: 998
 ---
 
 # Settings
