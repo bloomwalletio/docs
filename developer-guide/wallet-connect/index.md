@@ -1,6 +1,6 @@
 ---
-icon: link
-expanded: true
+icon: broadcast
+expanded: false
 order: 999
 ---
 
