@@ -1,5 +1,5 @@
 ---
-icon: person
+icon: people
 expanded: true
 order: 999
 ---

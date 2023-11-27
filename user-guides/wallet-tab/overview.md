@@ -1,5 +1,5 @@
 ---
-icon: fiscal-host
+icon: browser
 order: 1000
 ---
 
