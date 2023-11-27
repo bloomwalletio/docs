@@ -1,7 +1,7 @@
 ---
 icon: link
-expanded: false
-order: 999
+expanded: true
+order: 998
 ---
 
 # Deep Links

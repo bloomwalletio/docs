@@ -1,7 +1,7 @@
 ---
-icon: broadcast
-expanded: false
-order: 999
+icon: link
+expanded: true
+order: 998
 ---
 
 # WalletConnect
