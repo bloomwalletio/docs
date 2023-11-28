@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/bloom-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.754407725749">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.754500950166">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Guide | Bloom Developer Docs</title>
     <meta name="title" content="Guide | Bloom Developer Docs">
-    <meta name="description" content="WalletConnect s Web3Modal has many suggestions on wallets on all ecosystems, but these suggestions can be adapted and changed by the dApp developer.">
+    <meta name="description" content="As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://bloomwalletio.github.io/bloom-docs/developer-guide/wallet-connect/guide/">
@@ -21,22 +21,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bloomwalletio.github.io/bloom-docs/developer-guide/wallet-connect/guide/">
     <meta property="og:title" content="Guide | Bloom Developer Docs">
-    <meta property="og:description" content="WalletConnect s Web3Modal has many suggestions on wallets on all ecosystems, but these suggestions can be adapted and changed by the dApp developer.">
+    <meta property="og:description" content="As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://bloomwalletio.github.io/bloom-docs/developer-guide/wallet-connect/guide/">
     <meta property="twitter:title" content="Guide | Bloom Developer Docs">
-    <meta property="twitter:description" content="WalletConnect s Web3Modal has many suggestions on wallets on all ecosystems, but these suggestions can be adapted and changed by the dApp developer.">
+    <meta property="twitter:description" content="As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/icon_bloom.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.754407725749" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.754500950166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.754407725749" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.754500950166" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.754407725749" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.754500950166" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -249,12 +249,49 @@
         <span>Guide</span>
     </h1>
 </doc-anchor-target>
+<doc-anchor-target id="include-bloom-in-web3modal">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#include-bloom-in-web3modal">#</doc-anchor-trigger>
+        <span>Include Bloom in Web3Modal</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="add-bloom-to-wallets">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-bloom-to-wallets">#</doc-anchor-trigger>
+        <span>Add Bloom to wallets</span>
+    </h3>
+</doc-anchor-target>
+<p>As we&#x27;re waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">createWeb3Modal({
+  //...
+  desktopWallets: [
+    {
+        id: '652df0cee82d5cd3cadfd57829c5578a',
+        name: 'Bloom Wallet',
+        links: {
+            native: 'bloom://walletConnect/connect'
+            universal: 'bloomwallet.io',
+        },
+    },
+  ],
+  walletImages: {
+    652df0cee82d5cd3cadfd57829c5578a: &quot;bloomwallet.io/assets/logos/bloom.png&quot;,
+  };
+})</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="add-bloom-as-recommendation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-bloom-as-recommendation">#</doc-anchor-trigger>
+        <span>Add Bloom as recommendation</span>
+    </h3>
+</doc-anchor-target>
 <p><code v-pre>WalletConnect</code>s <code v-pre>Web3Modal</code> has many suggestions on wallets on all ecosystems, but these suggestions can be adapted and changed by the dApp developer. If <code v-pre>Bloom</code> wallet implements features that your app requires, or if you generally want to recomment <code v-pre>Bloom</code> for your dApp&#x27;s users, you can include the following code into your code base:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">createWeb3Modal({
   //...
   featuredWalletIds: [
-    '1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369', // Bloom wallet
+    '652df0cee82d5cd3cadfd57829c5578a', // Bloom wallet
   ]
 })</code></pre>
 </doc-codeblock></div>
@@ -263,7 +300,7 @@
 <pre class="language-none"><code v-pre class="language-none">createWeb3Modal({
   //...
   includeWalletIds: [
-    '1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369', // Bloom wallet
+    '652df0cee82d5cd3cadfd57829c5578a', // Bloom wallet
   ]
 })</code></pre>
 </doc-codeblock></div>
