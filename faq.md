@@ -17,6 +17,8 @@ If you still find yourself with questions after looking through the ones below, 
 
 ## Setup
 
+...
+
 ## Security
 
 - **Can I use my Ledger device with Bloom?**
