@@ -9,7 +9,7 @@ order: 400
 
 Welcome to the FAQ!
 
-Here you will find answers to all of the frequently asked questions we have received.
+Here you will find answers to the frequently asked questions we have received.
 
 :::info
 If you still find yourself with questions after looking through the ones below, please reach out to us on [Discord](https://t.co/uovp2LDwKg){target=_blank}.
@@ -27,11 +27,11 @@ If you still find yourself with questions after looking through the ones below, 
 
 - **Can I use a mnemonic phrase with Bloom?**
 
-  Yes, Bloom supports 12- and 24-word mnemonic phrases, which are used to create software profiles.
+  Yes, Bloom supports 12- and 24-word mnemonic phrases when restoring profiles. When creating a profile, Bloom only allows 24-word mnemonic phrases.
 
 - **What is Stronghold?**
 
-  Stronghold is the software security mechanism we use to securely store the private keys for software profiles. It is a software library that uses special cryptographic techniques to hide secrets in memory.
+  Stronghold is the software security mechanism to securely store the private keys for software profiles. This software library uses special cryptographic techniques to hide secrets in memory.
 
 - **Can I change my Stronghold password?**
 
