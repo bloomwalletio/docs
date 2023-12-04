@@ -15,20 +15,16 @@ As we're waiting for WalletConnect to approve our project, you can add Bloom man
 
 ```
 createWeb3Modal({
-  //...
-  desktopWallets: [
-    {
-        id: '652df0cee82d5cd3cadfd57829c5578a',
-        name: 'Bloom Wallet',
-        links: {
-            native: 'bloom://walletConnect/connect'
-            universal: 'bloomwallet.io',
-        },
-    },
+  //... 
+  customWallets: [
+      {
+          id: 'bloom',
+          name: 'Bloom',
+          homepage: 'https://bloomwallet.io/',
+          image_url: 'https://bloomwallet.io/assets/logos/bloom.png',
+          desktop_link: 'bloom://dapps/connect',
+      },
   ],
-  walletImages: {
-    652df0cee82d5cd3cadfd57829c5578a: "bloomwallet.io/assets/logos/bloom.png",
-  };
 })
 ```
 
@@ -41,17 +37,6 @@ createWeb3Modal({
 createWeb3Modal({
   //...
   featuredWalletIds: [
-    '652df0cee82d5cd3cadfd57829c5578a', // Bloom wallet
-  ]
-})
-```
-
-If your dApp requires a feature that most of the wallets don't implement, but `Bloom` does, you can use the following code instead of the code on top:
-
-```
-createWeb3Modal({
-  //...
-  includeWalletIds: [
     '652df0cee82d5cd3cadfd57829c5578a', // Bloom wallet
   ]
 })
