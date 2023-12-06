@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/bloom-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.755077625014">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.755169700314">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Guide | Bloom Developer Docs</title>
     <meta name="title" content="Guide | Bloom Developer Docs">
-    <meta name="description" content="As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:">
+    <meta name="description" content="To include Bloom Wallet in the list of recommended wallets, please add the following code to your Web3Modal options:">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://bloomwalletio.github.io/bloom-docs/developer-guide/wallet-connect/guide/">
@@ -21,22 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bloomwalletio.github.io/bloom-docs/developer-guide/wallet-connect/guide/">
     <meta property="og:title" content="Guide | Bloom Developer Docs">
-    <meta property="og:description" content="As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:">
+    <meta property="og:description" content="To include Bloom Wallet in the list of recommended wallets, please add the following code to your Web3Modal options:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://bloomwalletio.github.io/bloom-docs/developer-guide/wallet-connect/guide/">
     <meta property="twitter:title" content="Guide | Bloom Developer Docs">
-    <meta property="twitter:description" content="As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:">
+    <meta property="twitter:description" content="To include Bloom Wallet in the list of recommended wallets, please add the following code to your Web3Modal options:">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/icon_bloom.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.755077625014" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.755169700314" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.755077625014" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.755169700314" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.755077625014" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.755169700314" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.755169700314" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -249,35 +250,26 @@
         <span>Guide</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="include-bloom-in-web3modal">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#include-bloom-in-web3modal">#</doc-anchor-trigger>
-        <span>Include Bloom in Web3Modal</span>
-    </h2>
-</doc-anchor-target>
 <doc-anchor-target id="web3modal">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#web3modal">#</doc-anchor-trigger>
         <span>Web3Modal</span>
     </h1>
 </doc-anchor-target>
+<p>To include <code v-pre>Bloom Wallet</code> in the list of recommended wallets, please add the following code to your Web3Modal options:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">createWeb3Modal({
+<pre class="language-javascript"><code v-pre class="language-javascript">createWeb3Modal({
   //...
   featuredWalletIds: [
     '652df0cee82d5cd3cadfd57829c5578a', // Bloom wallet
   ]
 })</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="temporary">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#temporary">#</doc-anchor-trigger>
-        <span>Temporary</span>
-    </h3>
-</doc-anchor-target>
+<hr>
+<p><strong>NOTE</strong></p>
 <p>As we&#x27;re waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">createWeb3Modal({
+<pre class="language-javascript"><code v-pre class="language-javascript">createWeb3Modal({
   //... 
   customWallets: [
       {
@@ -290,14 +282,16 @@
   ],
 })</code></pre>
 </doc-codeblock></div>
+<hr>
 <doc-anchor-target id="rainbowkit">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#rainbowkit">#</doc-anchor-trigger>
         <span>RainbowKit</span>
     </h1>
 </doc-anchor-target>
+<p>To include <code v-pre>Bloom Wallet</code> in the list of recommended wallets, please add the following code to your RainbowKit options:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">import {
+<pre class="language-javascript"><code v-pre class="language-javascript">import {
   ...,
   bloomWallet,
   ...
@@ -390,6 +384,6 @@ const connectors = connectorsForWallets([
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Guide", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Guide", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
