@@ -1,6 +1,6 @@
 ---
-icon: link
-expanded: true
+icon: apps
+expanded: false
 order: 998
 ---
 
@@ -10,7 +10,7 @@ To be able to connect with the IOTA / Shimmer ecosystem, Bloom implements `Walle
 
 If you're a dApp developer and plan to implement `WalletConnect` into your dApp, checkout https://docs.walletconnect.com/web3modal/about.
 
-**Bloom projectId**: `652df0cee82d5cd3cadfd57829c5578a` 
+**Bloom projectId**: `652df0cee82d5cd3cadfd57829c5578a`
 
 [Include Bloom](guide.md)  
 [Supported Networks and Methods](supported.md)

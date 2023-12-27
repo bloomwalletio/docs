@@ -4,7 +4,7 @@
     "description": "Developer documentation for Bloom",
     "main": "index.js",
     "repository": "git@github.com:bloomwalletio/bloom-docs.git",
-    "author": "Matthew Maxwell <maxwellmattryan@gmail.com>",
+    "author": "Bloom Labs Ltd <contact@bloomwallet.io>",
     "license": "MIT",
     "private": false,
     "scripts": {
