@@ -33,7 +33,7 @@ createWeb3Modal({
       name: "Bloom",
       homepage: "https://bloomwallet.io/",
       image_url: "https://bloomwallet.io/assets/logos/bloom.png",
-      desktop_link: "bloom://wallet-connect/connect",
+      desktop_link: "bloom://wallet-connect/connect?uri=",
     },
   ],
 });
