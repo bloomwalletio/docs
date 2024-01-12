@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/bloom-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.757001530079">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.758364833667">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -32,12 +32,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/icon_bloom.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.757001530079" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.758364833667" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.757001530079" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.758364833667" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.757001530079" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.757001530079" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.758364833667" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.758364833667" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -261,9 +261,9 @@
 <pre class="language-javascript"><code v-pre class="language-javascript">createWeb3Modal({
   //...
   featuredWalletIds: [
-    &quot;652df0cee82d5cd3cadfd57829c5578a&quot;, // Bloom wallet
-  ],
-});</code></pre>
+    'XXXXXYYYYZZZZZ11111222223333', // Bloom wallet, this ID will be fixed once we're approved
+  ]
+})</code></pre>
 </doc-codeblock></div>
 <hr>
 <p><strong>NOTE</strong></p>
@@ -298,6 +298,69 @@
 } from '@rainbow-me/rainbowkit/wallets';
 
 
+...
+
+
+const connectors = connectorsForWallets([
+    {
+        groupName: 'Recommended',
+        wallets: [
+            ...,
+            bloomWallet({ projectId, chains }),
+            ...
+        ],
+    },
+]);</code></pre>
+</doc-codeblock></div>
+<p><strong>NOTE</strong></p>
+<p>As we&#x27;re waiting for RainbowKit to merge our PR in, you can add Bloom manually to the list of wallets as follows:</p>
+<p>Create a <code v-pre>bloomWallet.ts(|js)</code> file:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">import {
+  Chain,
+  Wallet,
+  getWalletConnectConnector,
+} from '@rainbow-me/rainbowkit';
+
+export interface MyWalletOptions {
+  projectId: string;
+  chains: Chain[];
+}
+
+export const bloomWallet = ({
+  chains,
+  projectId,
+}: MyWalletOptions): Wallet =&gt; ({
+  id: 'bloomWallet',
+  name: 'Bloom Wallet',
+  iconUrl: 'https://bloomwallet.io/assets/logos/bloom.png',
+  iconBackground: '#000',
+  downloadUrls: {
+    windows: 'https://bloomwallet.io/',
+    macos: 'https://bloomwallet.io/',
+    linux: 'https://bloomwallet.io/',
+    desktop: 'https://bloomwallet.io/',
+  },
+  createConnector: () =&gt; {
+    const connector = getWalletConnectConnector({ projectId, chains });
+    return {
+      connector,
+      desktop: {
+        getUri: async () =&gt; {
+          const provider = await connector.getProvider();
+          const uri = await new Promise&lt;string&gt;(resolve =&gt;
+            provider.once('display_uri', resolve)
+          );
+          return `bloom://wallet-connect/connect?uri=${encodeURIComponent(uri)}`;
+        }
+      },
+    };
+  },
+});</code></pre>
+</doc-codeblock></div>
+<p>In the file where you setup your connectors, add the following:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">import { bloomWallet } from 'path/to/bloomWallet.ts';
 ...
 
 
@@ -355,7 +418,7 @@ const connectors = connectorsForWallets([
                                     <ul class="flex flex-wrap items-center text-sm">
                                     </ul>
                                 </div>
-                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023. All rights reserved.</p></div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2024. All rights reserved.</p></div>
                             </footer>
                         </div>
                     </div>
