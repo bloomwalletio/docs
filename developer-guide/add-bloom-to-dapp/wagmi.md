@@ -387,7 +387,6 @@ export async function getWalletConnectUri(provider): Promise<string> {
 const config = createConfig({
     connectors: [
       bloomWallet({ projectId: process.env.WALLETCONNECT_PROJECT_ID }),
-      walletConnect({ projectId: process.env.WALLETCONNECT_PROJECT_ID }),
       ...
     ],
     ...
@@ -811,18 +810,6 @@ const config = createConfig({
         },
     }),
     ...
-    new MetaMaskConnector({
-      chains,
-      options: {
-        UNSTABLE_shimOnConnectSelectAccount: true,
-      },
-    }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        projectId: process.env.WALLETCONNECT_PROJECT_ID ?? '',
-      },
-    }),
   ],
   ...
 })
