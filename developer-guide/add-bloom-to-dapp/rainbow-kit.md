@@ -1,47 +1,9 @@
 ---
-icon: book
-order: 1000
----
-
-# Guide
-
-# Web3Modal
-
-To include `Bloom Wallet` in the list of recommended wallets, please add the following code to your Web3Modal options:
-
-```javascript
-createWeb3Modal({
-  //...
-  featuredWalletIds: [
-    'XXXXXYYYYZZZZZ11111222223333', // Bloom wallet, this ID will be fixed once we're approved
-  ]
-})
-```
-
----
-
-**NOTE**
-
-As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:
-
-```javascript
-createWeb3Modal({
-  //...
-  customWallets: [
-    {
-      id: "bloom",
-      name: "Bloom",
-      homepage: "https://bloomwallet.io/",
-      image_url: "https://bloomwallet.io/assets/logos/bloom.png",
-      desktop_link: "bloom://wallet-connect",
-    },
-  ],
-});
-```
-
+order: 800
 ---
 
 # RainbowKit
+
 
 To include `Bloom Wallet` in the list of recommended wallets, please add the following code to your RainbowKit options:
 
@@ -71,8 +33,9 @@ const connectors = connectorsForWallets([
 **NOTE**
 
 As we're waiting for RainbowKit to merge our PR in, you can add Bloom manually to the list of wallets as follows:
+1. Create a `bloomWallet.ts(|js)` file:
 
-Create a `bloomWallet.ts(|js)` file:
+<details><summary>bloomWallet.ts</summary>
 
 ```javascript
 import {
@@ -91,7 +54,7 @@ export const bloomWallet = ({
   projectId,
 }: MyWalletOptions): Wallet => ({
   id: 'bloomWallet',
-  name: 'Bloom Wallet',
+  name: 'Bloom',
   iconUrl: 'https://bloomwallet.io/assets/logos/bloom.png',
   iconBackground: '#000',
   downloadUrls: {
@@ -117,8 +80,10 @@ export const bloomWallet = ({
   },
 });
 ```
+</details>
+<br/>
 
-In the file where you setup your connectors, add the following:
+2. In the file where you setup your connectors, add the following:
 
 
 ```javascript
