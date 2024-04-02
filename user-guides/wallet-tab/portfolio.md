@@ -21,7 +21,7 @@ Bloom automatically fetches your Layer 2 balances every 10 seconds. Click on the
 
 ### Import ERC-20 Token
 
-Bloom tracks the user's ERC-20 tokens through the Layer 2 explorer API. However, the explorer isn't always real time, which is why Bloom offers the possibility to import an ERC-20 token through it's contract address. Go to the portfolio tab and click on the menu to select the `Import ERC20 token`. This opens a pop-up that allows you to select the network and input the contract address.
+Bloom tracks the user's ERC-20 tokens through the Layer 2 explorer API. However, the explorer isn't always real time, which is why Bloom offers the possibility to import an ERC-20 token through its contract address. Go to the portfolio tab and click on the menu to select the `Import ERC20 token`. This opens a pop-up that allows you to select the network and input the contract address.
 
 **Only ERC-20 Tokens on the supported EVM networks are supported!**
 
