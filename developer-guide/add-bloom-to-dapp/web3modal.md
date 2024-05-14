@@ -11,28 +11,8 @@ To include `Bloom Wallet` in the list of recommended wallets, please add the fol
 createWeb3Modal({
   //...
   featuredWalletIds: [
-    'XXXXXYYYYZZZZZ11111222223333', // Bloom wallet, this ID will be fixed once we're approved
+    '12ffbeb52b37f08bd8224a50e1cd2173286bf432832579861a5480bd662e349d',
   ]
 })
 ```
 
----
-
-**NOTE**
-
-As we're waiting for WalletConnect to approve our project, you can add Bloom manually to the list of wallets as follows:
-
-```javascript
-createWeb3Modal({
-  //...
-  customWallets: [
-    {
-      id: "bloom",
-      name: "Bloom",
-      homepage: "https://bloomwallet.io/",
-      image_url: "https://bloomwallet.io/assets/logos/bloom.png",
-      desktop_link: "bloom://wallet-connect",
-    },
-  ],
-});
-```
