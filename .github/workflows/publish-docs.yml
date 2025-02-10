@@ -1,9 +1,10 @@
 name: Publish Docs
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - 'develop'
+      - "develop"
 
 jobs:
   publish:
@@ -14,11 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+
       - uses: retypeapp/action-build@v3
+        id: build
         with:
           config: ./
 
-      - uses: retypeapp/action-github-pages@v3
+      - uses: cloudflare/wrangler-action@v3
         with:
-          branch: retype
-          update-branch: true
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ${{ steps.build.outputs.retype-output-path }} --project-name=bloom-docs --branch=retype
